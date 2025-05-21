@@ -1,6 +1,6 @@
 import  { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { introData } from "../lib/Data"; // adjust path if needed
+import { introData } from "../lib/Data"; 
 
 const Intro = () => {
     const earthRef = useRef(null);

@@ -106,7 +106,7 @@ export const servicesData: Service[] = [
       { name: "Hybrid App Development", icon: "/development/cloud-service.png" },
       { name: "Mobile Web App Development", icon: "/development/coding.png" },
       { name: "Backend Development", icon: "/development/web-development.png" },
-      { name: "API Integration", icon: "/development/integration.png" }, // corrected from ΑΡΙ to API
+      { name: "API Integration", icon: "/development/integration.png" }, 
       { name: "App Testing and Quality Assurance", icon: "/development/quality-control.png" },
       { name: "App Deployment and Maintenance", icon: "/development/deployment.png" },
       { name: "App Analytics and Monitoring", icon: "/development/trading.png" },

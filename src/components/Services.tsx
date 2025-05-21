@@ -22,8 +22,7 @@ const Services: React.FC = () => {
           scrollTrigger: {
             trigger: section,
             start: 'top 80%',
-            toggleActions: 'play none none none',
-            // markers: true, // Uncomment for debugging trigger points
+            toggleActions: 'play none none none',            
           },
         }
       );
@@ -55,18 +54,16 @@ const Services: React.FC = () => {
               </h2>
 
               <p className={`${isEven ? 'text-center lg:text-left' : 'text-center lg:text-right'} text-base lg:text-xl text-gray-300`}>{service.description}</p>
-
-              {/* Zig-Zag Layout */}
+             
               <div
                 className={`flex w-full lg:px-6 flex-col lg:flex-row items-center gap-8 ${isEven ? '' : 'lg:flex-row-reverse'
                   }`}
               >
-                {/* Image */}
+                
                 <div className="lg:w-[40%] flex justify-center z-10">
                   <img src={service.image} alt={service.heading} className="h fade-item" />
                 </div>
 
-                {/* Categories Box */}
                 <div className='pb-3'>
                   <div
                     style={{
@@ -93,7 +90,6 @@ const Services: React.FC = () => {
               </div>
             </div>
 
-            {/* Zig-Zag Background Image */}
             <div
               className={`absolute -bottom-10 ${isEven ? '-right-44 rotate-12' : '-left-44  -rotate-6 scale-x-[-1] '
                 } z-30 `}
