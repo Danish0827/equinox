@@ -1,51 +1,52 @@
-import React from 'react'
+import { FaRegUserCircle } from 'react-icons/fa'
+import { IoMailUnreadOutline } from 'react-icons/io5'
+import { PiPhoneLight } from 'react-icons/pi'
 
 const Info = () => {
     const categories = [
-        { name: "Character Rigging", icon: "/3dModeling/cubes.png" },
-        { name: "Facial Animation", icon: "/3dModeling/cubes.png" },
-        { name: "Motion Capture", icon: "/3dModeling/cubes.png" },
-        { name: "Physics Simulation", icon: "/3dModeling/cubes.png" },
-        { name: "Game Animation", icon: "/3dModeling/cubes.png" },
-        { name: "Character Rigging", icon: "/3dModeling/cubes.png" },
-        { name: "Facial Animation", icon: "/3dModeling/cubes.png" },
-        { name: "Motion Capture", icon: "F/3dModeling/cubes.png" },
-        { name: "Physics Simulation", icon: "/3dModeling/cubes.png" },
-        { name: "Game Animation", icon: "/3dModeling/cubes.png" },
+        {
+            name: "Goutham S.V", icon: FaRegUserCircle 
+        },
+        {
+            name: "goutham@equinoxtechsolutions.comF", icon: IoMailUnreadOutline 
+        },
+        {
+            name: "+91 88674 46851", icon: PiPhoneLight 
+        },
     ]
     return (
-        <div className="pt-16 relative overflow-hidden min-h-screen bg-gradient-to-tr from-[#11071f] via-[#11071f] to-[#210a42] text-white">
+        <div className="pt-14 border-b-2 border-cyan-400 relative overflow-hidden min-h-screen bg-gradient-to-tr from-[#11071f] via-[#11071f] to-[#210a42] text-white">
 
             <div className="flex flex-col items-center gap-10 w-full max-w-7xl">
-                <h2 className="text-4xl font-semibold border-b-2 border-cyan-400 shadow-lg pb-2 mb-10 text-center">
-                    dasd
+                <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold border-b-2 border-cyan-400 shadow-lg pb-2 mb-10 text-center">
+                    Know Our CEO
                 </h2>
             </div>
-            <div
-                style={{
-                    boxShadow:
-                        'rgb(146 146 167 / 25%) 0px 0px 5px 9px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px 2064px inset',
-                }}
-                className="relative z-40 lg:max-w-6xl mx-auto w-full bg-transparent grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 border border-cyan-400 p-8 rounded-xl"
-            >
-                {categories.map((category, idx) => (
-                    <div
-                        key={idx}
-                        className="py-5 flex flex-col items-center justify-center text-white text-sm font-medium rounded-lg"
-                    >
-                        <img
-                            src={category.icon}
-                            alt={category.name}
-                            className="h-10 mb-2 fade-item"
-                        />
-                        <div className="text-center">{category.name}</div>
+            <div className='px-3 pb-3'>
+                <div
+                    style={{
+                        boxShadow:
+                            'rgb(146 146 167 / 25%) 0px 0px 5px 9px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px 2064px inset',
+                    }}
+                    className="relative z-40 lg:max-w-7xl mx-auto w-full bg-transparent  border border-cyan-400 p-8 rounded-xl"
+                >
+                    {categories.map((category, idx) => (
+                        <div
+                            key={idx}
+                            className="py-1 flex flex-row gap-4 items-center justify-start text-white text-sm font-medium rounded-lg"
+                        >
+                            <category.icon
+                                className="h-7 mb-2 "
+                            />
+                            <div className="text-center text-xl">{category.name}</div>
+                        </div>
+                    ))}
+                    <div className='pt-12 pb-8'>
+                        <p className='text-xl lg:text-2xl'>His passion for technology is no secret and his hunger to do more is an inspiration. Gautam S.V., our Head of Technology, has in-depth knowledge about all things tech and unique skills for making good things better. Truly skilled in problem-solving, he leverages complex technology to solve complex business problems and deliver simple, tangible solutions.</p>
+
                     </div>
-                ))}
+                </div>
             </div>
-
-
-
-
             <div
                 className={`absolute -bottom-10 -right-44 rotate-12 z-30 `}
             >
