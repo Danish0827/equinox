@@ -33,10 +33,10 @@ const Info = () => {
                     {categories.map((category, idx) => (
                         <div
                             key={idx}
-                            className="py-1 flex flex-row gap-4 items-center justify-start text-white text-sm font-medium rounded-lg"
+                            className="py-1 mb-2 flex flex-row gap-4 items-center justify-start text-white text-sm font-medium rounded-lg"
                         >
                             <category.icon
-                                className="h-7 mb-2 "
+                                className="text-3xl "
                             />
                             <div className="text-center text-xl">{category.name}</div>
                         </div>
