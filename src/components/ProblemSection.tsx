@@ -28,8 +28,9 @@ const ProblemSection = () => {
     gsap.to(elements, {
       scrollTrigger: {
         trigger: ".problem-section",
-        start: "top 80%",
-        toggleActions: "play none none none",
+        start: "top 60%",
+        toggleActions: 'play reverse play reverse',
+
       },
       opacity: 1,
       y: 0,
@@ -42,7 +43,7 @@ const ProblemSection = () => {
   return (
     <div className="problem-section border-b-2 border-cyan-400 min-h-screen bg-gradient-to-b from-[#0b032d] via-[#211146] to-[#1a002c] text-white py-20 px-6 md:px-20">
       <div className="flex flex-col items-center gap-12 w-full max-w-7xl">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold border-b-2 border-cyan-400 shadow-lg pb-2 mb-10 text-center">
+        <h2 className="problem-card text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold border-b-2 border-cyan-400 shadow-lg pb-2 mb-10 text-center">
           What Problem Are You Facing?
         </h2>
       </div>
@@ -51,9 +52,8 @@ const ProblemSection = () => {
         {problems.map((item, i) => (
           <div
             key={i}
-            className={`problem-card bg-gradient-to-br from-[#130e22] via-[#1d1246] to-[#302357] rounded-xl shadow-lg p-6 flex items-start gap-4 ${
-              i === 2 ? "md:col-span-2 mx-auto w-full md:w-2/3" : ""
-            }`}
+            className={`problem-card bg-gradient-to-br from-[#130e22] via-[#1d1246] to-[#302357] rounded-xl shadow-lg p-6 flex items-start gap-4 ${i === 2 ? "md:col-span-2 mx-auto w-full md:w-2/3" : ""
+              }`}
           >
             <div
               style={{
