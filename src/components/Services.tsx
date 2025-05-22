@@ -92,7 +92,7 @@ const Services: React.FC = () => {
                     imagesRef.current[index] = el;
                   }}
                 >
-                  <img src={service.image} alt={service.heading} />
+                  <img className='hover:scale-[120%] duration-500' src={service.image} alt={service.heading} />
                 </div>
 
                 <div className="pb-3 icon-card">
@@ -106,10 +106,10 @@ const Services: React.FC = () => {
                     {service.categories.map((category, idx) => (
                       <div
                         key={idx}
-                        className="icon-card py-1 flex flex-col items-center justify-center text-white text-sm font-medium rounded-lg"
+                        className="icon-card py-1 flex flex-col group items-center justify-center text-white text-sm font-medium rounded-lg"
                       >
-                        <img src={category.icon} alt={category.name} className="h-10 mb-2" />
-                        <div className="text-center text-sm lg:text-base">{category.name}</div>
+                        <img src={category.icon} alt={category.name} className="h-10 mb-2 group-hover:mb-3 group-hover:scale-[120%] duration-500" />
+                        <div className="text-center text-sm lg:text-base ">{category.name}</div>
                       </div>
                     ))}
                   </div>
@@ -120,7 +120,7 @@ const Services: React.FC = () => {
             <div
               className={`icon-card absolute -bottom-10 ${isEven ? '-right-44 rotate-12' : '-left-44 -rotate-6 scale-x-[-1]'} z-30`}
             >
-              <img src="/bottom-earth.png" alt="equinox" />
+              <img className='hover:scale-[120%] duration-500' src="/bottom-earth.png" alt="equinox" />
             </div>
           </div>
         );

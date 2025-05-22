@@ -66,9 +66,9 @@ const MainServices = () => {
                     {services.map((item, idx) => (
                         <div
                             key={idx}
-                            className="icon-card py-8 flex flex-col items-center justify-center text-white text-sm font-medium rounded-lg "
+                            className="icon-card py-8 flex flex-col items-center group justify-center text-white text-sm font-medium rounded-lg "
                         >
-                            <img src={item.icon} alt={item.name} className="h-14 mb-4" />
+                            <img src={item.icon} alt={item.name} className="h-14 mb-4 group-hover:scale-[120%] duration-500" />
                             <div className="text-center text-sm md:text-base lg:text-xl">
                                 {item.name}
                             </div>
