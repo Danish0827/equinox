@@ -31,7 +31,7 @@ const Intro = () => {
           scrollTrigger: {
             trigger: el,
             start: "top 80%",
-            toggleActions: "play reverse play reverse",
+            toggleActions: 'play none play none',
           },
           delay: i * 0.2,
         }
@@ -52,7 +52,7 @@ const Intro = () => {
     scrollTrigger: {
       trigger: earthRef.current,
       start: "top 80%",
-      toggleActions: "play reverse play reverse",
+      toggleActions: 'play none play none',
     },
   }
 );
@@ -61,7 +61,7 @@ const Intro = () => {
     ScrollTrigger.create({
       trigger: bottomRef.current,
       start: "top 80%",
-      toggleActions: "play reverse play reverse",
+      toggleActions: 'play none play none',
       onEnter: () => {
         gsap.to(bottomRef.current, {
           opacity: 1,

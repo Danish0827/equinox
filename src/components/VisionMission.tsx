@@ -36,7 +36,7 @@ const VisionMission = () => {
                     scrollTrigger: {
                         trigger: card,
                         start: "top 80%",
-                        toggleActions: "play reverse play reverse",
+                        toggleActions: 'play none play none',
                     },
                 }
             );

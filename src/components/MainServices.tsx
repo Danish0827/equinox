@@ -31,7 +31,7 @@ const MainServices = () => {
             scrollTrigger: {
                 trigger: sectionRef.current, 
                 start: "top 80%",
-                toggleActions: 'play reverse play reverse',
+                toggleActions: 'play none play none',
             },
             opacity: 1,
             y: 0,

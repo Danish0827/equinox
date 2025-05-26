@@ -26,7 +26,7 @@ const ReactUs = () => {
             scrollTrigger: {
               trigger: el,
               start: "top 90%",
-              toggleActions: "play reverse play reverse", 
+              toggleActions: 'play none play none',
               scrub: false,
             },
           }

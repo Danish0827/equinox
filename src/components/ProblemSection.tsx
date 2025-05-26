@@ -29,7 +29,7 @@ const ProblemSection = () => {
       scrollTrigger: {
         trigger: ".problem-section",
         start: "top 60%",
-        toggleActions: 'play reverse play reverse',
+        toggleActions: 'play none play none',
 
       },
       opacity: 1,

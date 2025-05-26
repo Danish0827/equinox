@@ -15,44 +15,43 @@ const Services: React.FC = () => {
 
       const elements = section.querySelectorAll('.icon-card');
       const imageEl = imagesRef.current[index];
+      const isEven = index % 2 !== 0;
 
       gsap.set(elements, { opacity: 0, y: 80 });
-
-      gsap.to(elements, {
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          toggleActions: 'play reverse play reverse',
-        },
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: 'power3.out',
-        stagger: 0.3,
-        overwrite: 'auto',
-      });
-
       if (imageEl) {
-        const isEven = index % 2 !== 0;
         gsap.set(imageEl, {
           opacity: 0,
           x: isEven ? 100 : -100,
         });
-
-        gsap.to(imageEl, {
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 80%',
-            toggleActions: 'play reverse play reverse',
-          },
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          delay: 1.5, 
-          ease: 'power2.out',
-          overwrite: 'auto',
-        });
       }
+
+      ScrollTrigger.create({
+        trigger: section,
+        start: 'top 80%',
+        onEnter: (self) => {
+          if (self.direction === 1) {
+            gsap.to(elements, {
+              opacity: 1,
+              y: 0,
+              duration: 1.2,
+              ease: 'power3.out',
+              stagger: 0.3,
+              overwrite: 'auto',
+            });
+
+            if (imageEl) {
+              gsap.to(imageEl, {
+                opacity: 1,
+                x: 0,
+                duration: 1,
+                delay: 1.5,
+                ease: 'power2.out',
+                overwrite: 'auto',
+              });
+            }
+          }
+        },
+      });
     });
 
     return () => {
@@ -72,7 +71,7 @@ const Services: React.FC = () => {
             }}
             className={`${isEven ? 'bg-gradient-to-tr' : 'bg-gradient-to-tl'} border-b-2 border-cyan-400 from-[#11071f] via-[#11071f] to-[#11071f] lg:to-[#210a42] min-h-screen relative overflow-hidden pt-20 px-3 lg:px-6 flex flex-col items-center gap-32`}
           >
-            <div className="flex flex-col items-center gap-10 w-full ">
+            <div className="flex flex-col items-center gap-10 w-full">
               <h2 className="icon-card text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold border-b-2 border-cyan-400 shadow-lg pb-2 text-center">
                 {service.heading}
               </h2>
